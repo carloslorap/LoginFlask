@@ -1,0 +1,42 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 99vh;
+}
+
+.content_login{
+    border: 1px solid rgb(163, 163, 163);
+    padding: 10px;
+    border-radius: 10px;
+
+}
+.content_login h1{
+    text-align: center;
+
+}
+.content_login button{
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+.input_box input{
+    width: 92%;
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid grey;
+}
+
+.error_message{
+    border: 2px solid rgb(255, 31, 31);
+    border-radius: 10px;
+    padding: 0px 10px;
+    margin-top: 10px;
+    background-color: rgb(247, 117, 117);
+    color: white;
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Usuarios</title>
+</head>
+
+<body>
+    <h1>Usuarios</h1>
+    <a href="{{ url_for('tasks.create_task') }}">Crear nuevo usuario</a>
+    <ul>
+        {% for task in tasks %}
+        <li>
+            {{ task.id }} - {{ task.title }}
+            <a href="{{ url_for('tasks.edit_task', id=task.id) }}">Editar</a>
+            <a href="{{ url_for('tasks.delete_task', id=task.id) }}">Eliminar</a>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+
+</html>
