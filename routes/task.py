@@ -1,10 +1,16 @@
-from flask import Blueprint, render_template, request, redirect, url_for
+from flask import Blueprint, render_template, request, redirect, url_for,session as flask_session
 from models.taskModel import Task
 
 from models import db
 
 tasks_bp = Blueprint("tasks", __name__)
 
+
+@tasks_bp.before_request
+def verificar_sesion():
+    if flask_session.get("user_id") is None:
+        print("Usuario no autenticado. Redirigiendo al login.")
+        return redirect(url_for("users.login"))
 
 @tasks_bp.route("/tasks")
 def task():
